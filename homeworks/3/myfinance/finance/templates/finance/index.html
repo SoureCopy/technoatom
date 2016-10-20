@@ -1,14 +1,10 @@
-<!DOCTYPE HTML>
-<html lang="ru">
-	<head>
-		<meta charset="utf-8" />
-		<title>HelloWorld-page (Technoatom)</title>
-		<link type="text/css" rel="stylesheet" href="../stylesheets/style.css">
-	</head>
-	<body>
-		<header>
-			<center><h1>Hello! Welcome to site!</h1></center>
-		</header>
-  		<p><center><h3><a href="charges.html">Go to charges-page!</a></h3></center></p>
-	</body>
-</html>
+{% extends "finance/base.html" %}
+
+{% block title %}HelloWorld-page{% endblock %}
+
+{% block content %}
+<center>
+<h1>Hello! Welcome to my site!</h1>
+<h3><a href='/charges'>Go to my charges!</a></h3>
+</center>
+{% endblock %}

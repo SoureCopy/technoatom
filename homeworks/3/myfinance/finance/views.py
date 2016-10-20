@@ -1,8 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-# Create your views here.
-def start_page(request):
-	return HttpResponse("finance/index.html")
 
+from finance.utils import gen_headers, gen_charges
+
+def start_page(request):
+    return render(request, "finance/index.html")
+
+# Create your views here.
 def charge_page(request):
-	return HttpResponse("finance/charges.html")
+    context = {
+        'headers': gen_headers(),
+        'charges': gen_charges()
+    }
+    return render(request, "finance/charges.html", context)
