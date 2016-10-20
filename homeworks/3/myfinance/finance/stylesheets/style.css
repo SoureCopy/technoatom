@@ -1,0 +1,12 @@
+table, tr, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+a:link, a:visited {
+	color: #ADD8E6;
+	text-decoration: none;
+}
+a:hover {
+	color: #FF7F50;
+}
